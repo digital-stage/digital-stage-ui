@@ -9,20 +9,7 @@ type Props = {
 const PrimaryIconButton = (props: React.ComponentPropsWithRef<'button'> & Props): JSX.Element => {
   const { children, text } = props;
   return (
-    <Button
-      variant="primaryIcon"
-      {...props}
-      sx={{ color: text === 'dark' ? 'background' : 'text' }}
-    >
-      {children}
-    </Button>
-  );
-};
-
-const SecondaryIconButton = (props: React.ComponentPropsWithRef<'button'> & Props): JSX.Element => {
-  const { children, text } = props;
-  return (
-    <Button variant="secondary" {...props} sx={{ color: text === 'dark' ? 'background' : 'text' }}>
+    <Button variant="icon" {...props}>
       {children}
     </Button>
   );
@@ -31,21 +18,12 @@ const SecondaryIconButton = (props: React.ComponentPropsWithRef<'button'> & Prop
 const TertiaryIconButton = (props: React.ComponentPropsWithRef<'button'> & Props): JSX.Element => {
   const { children, text } = props;
   return (
-    <Button variant="tertiary" {...props} sx={{ color: text === 'dark' ? 'background' : 'text' }}>
+    <Button variant="tertiaryIcon" {...props}>
       {children}
     </Button>
   );
 };
 
-const DangerIconButton = (props: React.ComponentPropsWithRef<'button'> & Props): JSX.Element => {
-  const { children, text } = props;
-  return (
-    <Button variant="danger" {...props} sx={{ color: text === 'dark' ? 'background' : 'text' }}>
-      {children}
-    </Button>
-  );
-};
-
-export { PrimaryIconButton, SecondaryIconButton, TertiaryIconButton, DangerIconButton };
+export { PrimaryIconButton, TertiaryIconButton };
 
 export default Button;

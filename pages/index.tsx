@@ -6,10 +6,25 @@ import { Micro, Regular } from '../ui/Typography/Body';
 import Box, { RedBox, GrayBox } from '../ui/Layout/Box';
 import { DangerButton, PrimaryButton, SecondaryButton, TertiaryButton } from '../ui/Inputs/Button';
 import { BiPlus } from 'react-icons/bi';
-import { PrimaryIconButton } from '../ui/Inputs/IconButton';
-import { MdCallEnd } from 'react-icons/md';
+import { ImPhoneHangUp } from 'react-icons/im';
+import {
+  DangerFunctionIconButton,
+  PrimaryFunctionIconButton,
+} from '../ui/Inputs/FunctionIconButton';
+import { PrimaryToggleIconButton, TertiaryToggleIconButton } from '../ui/Inputs/ToggleIconButton';
+import CloseButton from '../ui/Inputs/CloseButton';
+import { PrimaryIconButton, TertiaryIconButton } from '../ui/Inputs/IconButton';
+import { FiEdit2 } from 'react-icons/fi';
+import DropDown from '../ui/Inputs/Dropdown';
+import Input from '../ui/Inputs/Input';
 
 export default function Home(): JSX.Element {
+  const [toggled, setToggled] = React.useState(false);
+
+  const handleToggle = () => {
+    setToggled(!toggled);
+  };
+
   return (
     <Box>
       <Flex>
@@ -62,6 +77,7 @@ export default function Home(): JSX.Element {
       </Flex>
       <Flex>
         <Box sx={{ width: '50%', bg: 'gray.4', py: 6 }}>
+          <H3>Text buttons</H3>
           <PrimaryButton>Button level 1</PrimaryButton>
           <PrimaryButton disabled>Disabled level 1</PrimaryButton>
           <PrimaryButton>
@@ -88,6 +104,7 @@ export default function Home(): JSX.Element {
           </DangerButton>
         </Box>
         <Box sx={{ width: '50%', bg: 'text', py: 6 }}>
+          <H3 sx={{ px: 0 }}>Text buttons</H3>
           <PrimaryButton>Button level 1</PrimaryButton>
           <PrimaryButton disabled>Disabled level 1</PrimaryButton>
           <PrimaryButton>
@@ -119,14 +136,135 @@ export default function Home(): JSX.Element {
       </Flex>
       <Flex>
         <Box sx={{ width: '50%', bg: 'gray.4', py: 6 }}>
-          <PrimaryIconButton>
-            <MdCallEnd size="24px" />
-          </PrimaryIconButton>
+          <H3 sx={{ px: 0 }}>Function icon button</H3>
+          <PrimaryFunctionIconButton>
+            <ImPhoneHangUp size="24px" />
+          </PrimaryFunctionIconButton>
+          <PrimaryFunctionIconButton disabled>
+            <ImPhoneHangUp size="24px" />
+          </PrimaryFunctionIconButton>
+          <DangerFunctionIconButton>
+            <ImPhoneHangUp size="24px" />
+          </DangerFunctionIconButton>
+          <DangerFunctionIconButton disabled>
+            <ImPhoneHangUp size="24px" />
+          </DangerFunctionIconButton>
         </Box>
         <Box sx={{ width: '50%', bg: 'text', py: 6 }}>
+          <H3 sx={{ px: 0 }}>Function icon button</H3>
+          <PrimaryFunctionIconButton>
+            <ImPhoneHangUp size="24px" />
+          </PrimaryFunctionIconButton>
+          <PrimaryFunctionIconButton disabled>
+            <ImPhoneHangUp size="24px" />
+          </PrimaryFunctionIconButton>
+          <DangerFunctionIconButton>
+            <ImPhoneHangUp size="24px" />
+          </DangerFunctionIconButton>
+          <DangerFunctionIconButton disabled>
+            <ImPhoneHangUp size="24px" />
+          </DangerFunctionIconButton>
+        </Box>
+      </Flex>
+      <Flex>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6 }}>
+          <H3 sx={{ px: 0 }}>Toggle icon button</H3>
+          <PrimaryToggleIconButton toggled={toggled} onClick={handleToggle}>
+            <ImPhoneHangUp size="24px" />
+          </PrimaryToggleIconButton>
+          <PrimaryToggleIconButton disabled>
+            <ImPhoneHangUp size="24px" />
+          </PrimaryToggleIconButton>
+          <TertiaryToggleIconButton toggled={toggled} onClick={handleToggle} color="light">
+            <ImPhoneHangUp size="24px" color={!toggled ? '#121212' : '#f4f4f4'} />
+          </TertiaryToggleIconButton>
+          <TertiaryToggleIconButton disabled>
+            <ImPhoneHangUp size="24px" color="#f4f4f4" />
+          </TertiaryToggleIconButton>
+        </Box>
+        <Box sx={{ width: '50%', bg: 'text', py: 6 }}>
+          <H3 sx={{ px: 0 }}>Toggle icon button</H3>
+          <PrimaryToggleIconButton toggled={toggled} onClick={handleToggle}>
+            <ImPhoneHangUp size="24px" />
+          </PrimaryToggleIconButton>
+          <PrimaryToggleIconButton disabled>
+            <ImPhoneHangUp size="24px" />
+          </PrimaryToggleIconButton>
+          <TertiaryToggleIconButton toggled={toggled} onClick={handleToggle} color="dark">
+            <ImPhoneHangUp size="24px" color="#f4f4f4" />
+          </TertiaryToggleIconButton>
+          <TertiaryToggleIconButton disabled color="dark">
+            <ImPhoneHangUp size="24px" color="#f4f4f4" />
+          </TertiaryToggleIconButton>
+        </Box>
+      </Flex>
+      <Flex>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6 }}>
+          <H3 sx={{ px: 0 }}>Inline icon button</H3>
+          <CloseButton />
           <PrimaryIconButton>
-            <MdCallEnd size="24px" />
+            <FiEdit2 />
           </PrimaryIconButton>
+          <TertiaryIconButton>
+            <FiEdit2 />
+          </TertiaryIconButton>
+        </Box>
+        <Box sx={{ width: '50%', bg: 'text', py: 6, px: 6 }}>
+          <H3 sx={{ px: 0 }}>Inline icon button</H3>
+          <CloseButton />
+          <PrimaryIconButton>
+            <FiEdit2 />
+          </PrimaryIconButton>
+          <TertiaryIconButton>
+            <FiEdit2 />
+          </TertiaryIconButton>
+        </Box>
+      </Flex>
+      <Flex>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 2 }}>
+          <H3>Select dropdowm</H3>
+          <Flex sx={{ justifyContent: 'center', flexDirection: 'column', px: 6 }}>
+            <DropDown
+              options={[
+                { id: '1', label: 'Option 1' },
+                { id: '2', label: 'Option 2' },
+              ]}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                e.target.value;
+              }}
+            />
+            <DropDown
+              options={[
+                { id: '1', label: 'Option 1' },
+                { id: '2', label: 'Option 2' },
+              ]}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                e.target.value;
+              }}
+              disabled
+            />
+            <DropDown
+              options={[
+                { id: '1', label: 'Option 1' },
+                { id: '2', label: 'Option 2' },
+              ]}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                e.target.value;
+              }}
+              error
+            />
+          </Flex>
+        </Box>
+        <Box sx={{ width: '50%', bg: 'text', py: 6, px: 6 }}></Box>
+      </Flex>
+      <Flex>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 6 }}>
+          <Input type="text" id="link" name="link" label="Link" />
+          <Input type="password" id="link" name="link" label="Link" />
+        </Box>
+        <Box sx={{ width: '50%', bg: 'text', py: 6, px: 6 }}>
+          <Input type="text" id="link" name="link" label="Link" version="dark" />
+          <Input type="password" id="link" name="link" label="Link" version="dark" />
         </Box>
       </Flex>
     </Box>

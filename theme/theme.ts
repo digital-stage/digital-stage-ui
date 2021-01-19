@@ -19,6 +19,10 @@ const theme: Theme = {
     muted: '#e0e0e0',
     highlight: '#9f9f9f',
     accent: '#3f3f3f',
+    textfield: '#292929',
+    textfieldDark: '#12121226',
+    label: '#9A9A9A',
+    labelDark: '#29292999',
     modes: {
       light: {
         text: '#121212',
@@ -213,37 +217,125 @@ const theme: Theme = {
         opacity: '0.5',
       },
     },
-    primaryIcon: {
-      color: 'primary',
+    functionPrimaryIcon: {
+      variant: 'buttons.primary',
+      p: 0,
+      m: 0,
       borderRadius: '50%',
       height: '48px',
       width: '48px',
-      // p: 3,
-      // ':hover': {
-      //   color: 'primaryHover',
-      //   bg: 'gray.5',
-      //   cursor: 'pointer',
-      // },
-      // ':active': {
-      //   color: 'primaryActive',
-      //   bg: 'gray.5',
-      // },
-      // ':focus': {
-      //   borderColor: 'primaryFocus',
-      //   outline: 0,
-      // },
-      // ':disabled': {
-      //   bg: 'primaryDisabled',
-      //   boxShadow: 'none',
-      // },
+      ':focus': {
+        borderColor: 'primaryFocus',
+        borderWidth: '3px',
+        borderStyle: 'solid',
+        outline: 0,
+      },
     },
-    tertiaryIcon: {
+    functionDangerIcon: {
+      variant: 'buttons.danger',
+      borderRadius: '50%',
+      height: '48px',
+      width: '48px',
+      p: 0,
+      m: 0,
+      border: '3px solid transparent',
+      ':focus': {
+        borderColor: 'primaryFocus',
+        borderWidth: '3px',
+        borderStyle: 'solid',
+        outline: 0,
+      },
+    },
+    toggleOnPrimaryIcon: {
+      variant: 'buttons.functionPrimaryIcon',
+      ':disabled': {
+        opacity: '0.5',
+        bg: 'tertiary',
+      },
+    },
+    toggleOfPrimaryIcon: {
       variant: 'buttons.tertiary',
+      bg: 'tertiary',
+      p: 0,
+      m: 0,
+      borderRadius: '50%',
+      height: '48px',
+      width: '48px',
+      ':hover': {
+        bg: 'gray.3',
+      },
+      ':active': {
+        bg: 'gray.1',
+      },
+      ':focus': {
+        borderColor: 'primaryFocus',
+        borderWidth: '3px',
+        borderStyle: 'solid',
+        outline: 0,
+      },
+      ':disabled': {
+        opacity: '0.5',
+        bg: 'tertiary',
+      },
+    },
+    toggleOnTertiaryIcon: {
+      variant: 'buttons.tertiary',
+      bg: 'text',
+      p: 0,
+      m: 0,
+      borderRadius: '50%',
+      height: '48px',
+      width: '48px',
+      border: '3px solid transparent',
+      ':hover': {
+        bg: 'gray.1',
+      },
+      ':active': {
+        bg: '#6F92F84D',
+      },
+      ':focus': {
+        borderColor: 'primaryFocus',
+        borderWidth: '3px',
+        borderStyle: 'solid',
+        outline: 0,
+      },
+      ':disabled': {
+        opacity: '0.5',
+        bg: 'tertiary',
+      },
+    },
+    close: {
+      color: 'gray.1',
+      borderRadius: '50%',
+      width: '32px',
+      height: '32px',
+      border: 0,
+      p: 0,
+      bg: 'transparent',
+      ':hover': {
+        bg: 'gray.2',
+        color: 'gray.3',
+        cursor: 'pointer',
+      },
+      ':active': {
+        bg: '#6F92F84D',
+      },
+      ':focus': {
+        border: '1px solid transparent',
+        borderColor: 'primaryFocus',
+        outline: 0,
+      },
+    },
+    icon: {
+      variant: 'buttons.primary',
       border: '1px solid transparent',
       borderColor: 'transparent',
       borderRadius: '50%',
-      color: 'tertiary',
-      p: 3,
+      color: 'primary',
+      p: 0,
+      width: '32px',
+      height: '32px',
+      bg: 'transparent',
       ':hover': {
         bg: 'gray.5',
         cursor: 'pointer',
@@ -259,6 +351,69 @@ const theme: Theme = {
       ':disabled': {
         border: '1px solid #80808080',
         boxShadow: 'none',
+      },
+    },
+    tertiaryIcon: {
+      variant: 'buttons.tertiary',
+      border: '1px solid transparent',
+      borderColor: 'transparent',
+      borderRadius: '50%',
+      color: 'tertiary',
+      p: 0,
+      width: '32px',
+      height: '32px',
+      bg: 'transparent',
+      ':hover': {
+        bg: 'gray.5',
+        cursor: 'pointer',
+      },
+      ':active': {
+        bg: 'primaryTransparent',
+        borderColor: 'primary',
+      },
+      ':focus': {
+        borderColor: 'primaryFocus',
+        outline: 0,
+      },
+      ':disabled': {
+        border: '1px solid #80808080',
+        boxShadow: 'none',
+      },
+    },
+  },
+  forms: {
+    checkbox: {
+      color: 'gray.5',
+    },
+    select: {
+      fontFamily: 'body',
+      fontWeight: 'body',
+      fontSize: 1,
+      height: '64px',
+      my: 5,
+      p: 5,
+      bg: 'gray.5',
+      border: 0,
+      borderBottom: '1px solid transparent',
+      borderColor: 'text',
+      borderRadius: 0,
+      ':hover': {
+        borderColor: 'primaryHover',
+        bg: 'gray.6',
+      },
+      ':focus': {
+        borderWidth: '3px',
+        borderColor: 'primaryFocus',
+        outline: 0,
+      },
+      'option:checked': {
+        color: 'primary',
+      },
+      ':disabled': {
+        bg: 'textfieldDark',
+        color: '#f4f4f44D',
+        borderColour: '#f4f4f44D',
+        opacity: '0.5',
       },
     },
   },
