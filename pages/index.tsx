@@ -1,52 +1,134 @@
-import Head from 'next/head';
+import React from 'react';
+import Flex from '../ui/Layout/Flex';
+import { DarkPanel, GrayPanel, LightPanel } from '../ui/Layout/Panel';
+import { H1, H2, H3, H4, H5, H6 } from '../ui/Typography/Heading';
+import { Micro, Regular } from '../ui/Typography/Body';
+import Box, { RedBox, GrayBox } from '../ui/Layout/Box';
+import { DangerButton, PrimaryButton, SecondaryButton, TertiaryButton } from '../ui/Inputs/Button';
+import { BiPlus } from 'react-icons/bi';
+import { PrimaryIconButton } from '../ui/Inputs/IconButton';
+import { MdCallEnd } from 'react-icons/md';
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Box>
+      <Flex>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6 }}>
+          <H3>Typography Headings</H3>
+          <H1>Heading h1</H1>
+          <H2>Heading h2</H2>
+          <H3>Heading h3</H3>
+          <H4>Heading h4</H4>
+          <H5>Heading h5</H5>
+          <H6>Heading h6</H6>
+        </Box>
+        <Box sx={{ width: '50%', bg: 'text', py: 6 }}>
+          <H3>Typography Heading</H3>
+          <H1 variant="dark">Heading h1</H1>
+          <H2 variant="dark">Heading h2</H2>
+          <H3 variant="dark">Heading h3</H3>
+          <H4 variant="dark">Heading h4</H4>
+          <H5 variant="dark">Heading h5</H5>
+          <H6 variant="dark">Heading h6</H6>
+        </Box>
+      </Flex>
+      <Flex>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6 }}>
+          <H3>Typography body</H3>
+          <Regular>Regular copy</Regular>
+          <Micro>Micro copy</Micro>
+        </Box>
+        <Box sx={{ width: '50%', bg: 'text', py: 6 }}>
+          <H3>Typography body</H3>
+          <Regular variant="dark">Regular copy</Regular>
+          <Micro variant="dark">Micro copy</Micro>
+        </Box>
+      </Flex>
+      <Flex>
+        <RedBox sx={{ width: '50%', bg: 'gray.4', py: 6 }}>
+          <Flex sx={{ justifyContent: 'center' }}>
+            <LightPanel />
+            <DarkPanel />
+            <GrayPanel />
+          </Flex>
+        </RedBox>
+        <GrayBox sx={{ width: '50%', bg: 'gray.4', py: 6 }}>
+          <Flex sx={{ justifyContent: 'center' }}>
+            <LightPanel />
+            <DarkPanel />
+            <GrayPanel />
+          </Flex>
+        </GrayBox>
+      </Flex>
+      <Flex>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6 }}>
+          <PrimaryButton>Button level 1</PrimaryButton>
+          <PrimaryButton disabled>Disabled level 1</PrimaryButton>
+          <PrimaryButton>
+            <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon level 1
+          </PrimaryButton>
 
-      <main>
-        <h1>Welcome to Digital Stage UI components</h1>
+          <SecondaryButton>Button level 2</SecondaryButton>
+          <SecondaryButton disabled>Disabled level 2</SecondaryButton>
+          <SecondaryButton>
+            <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon level 2
+          </SecondaryButton>
 
-        <p>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+          <TertiaryButton>Button level 3</TertiaryButton>
+          <TertiaryButton disabled>Disabled level 3</TertiaryButton>
+          <TertiaryButton>
+            <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon level 3
+          </TertiaryButton>
 
-        <div>
-          <a href="https://nextjs.org/docs">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <DangerButton>Danger button</DangerButton>
+          <DangerButton disabled>Disabled button</DangerButton>
+          <DangerButton>
+            <BiPlus size="16px" style={{ verticalAlign: 'middle' }} />
+            Icon button
+          </DangerButton>
+        </Box>
+        <Box sx={{ width: '50%', bg: 'text', py: 6 }}>
+          <PrimaryButton>Button level 1</PrimaryButton>
+          <PrimaryButton disabled>Disabled level 1</PrimaryButton>
+          <PrimaryButton>
+            <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon level 1
+          </PrimaryButton>
 
-          <a href="https://nextjs.org/learn">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <SecondaryButton text="dark">Button level 2</SecondaryButton>
+          <SecondaryButton text="dark" disabled>
+            Disabled level 2
+          </SecondaryButton>
+          <SecondaryButton text="dark">
+            <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon level 2
+          </SecondaryButton>
 
-          <a href="https://github.com/vercel/next.js/tree/master/examples">
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <TertiaryButton text="dark">Button level 3</TertiaryButton>
+          <TertiaryButton disabled text="dark">
+            Disabled level 3
+          </TertiaryButton>
+          <TertiaryButton text="dark">
+            <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon level 3
+          </TertiaryButton>
 
-          <a href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">
-            <h3>Deploy &rarr;</h3>
-            <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <img src="/vercel.svg" alt="Vercel Logo" />
-        </a>
-      </footer>
-    </div>
+          <DangerButton>Danger button</DangerButton>
+          <DangerButton disabled>Disabled button</DangerButton>
+          <DangerButton>
+            <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon button
+          </DangerButton>
+        </Box>
+      </Flex>
+      <Flex>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6 }}>
+          <PrimaryIconButton>
+            <MdCallEnd size="24px" />
+          </PrimaryIconButton>
+        </Box>
+        <Box sx={{ width: '50%', bg: 'text', py: 6 }}>
+          <PrimaryIconButton>
+            <MdCallEnd size="24px" />
+          </PrimaryIconButton>
+        </Box>
+      </Flex>
+    </Box>
   );
 }
