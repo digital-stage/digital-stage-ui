@@ -17,6 +17,7 @@ import { PrimaryIconButton, TertiaryIconButton } from '../ui/Inputs/IconButton';
 import { FiEdit2 } from 'react-icons/fi';
 import DropDown from '../ui/Inputs/Dropdown';
 import Input from '../ui/Inputs/Input';
+import Checkbox from '../ui/Inputs/Checkbox';
 
 export default function Home(): JSX.Element {
   const [toggled, setToggled] = React.useState(false);
@@ -265,6 +266,16 @@ export default function Home(): JSX.Element {
         <Box sx={{ width: '50%', bg: 'text', py: 6, px: 6 }}>
           <Input type="text" id="link" name="link" label="Link" version="dark" />
           <Input type="password" id="link" name="link" label="Link" version="dark" />
+        </Box>
+      </Flex>
+      <Flex>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 6 }}>
+          <H3>Checkbox</H3>
+          <Checkbox />
+        </Box>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 6 }}>
+          <H3>Checkbox</H3>
+          <Checkbox />
         </Box>
       </Flex>
     </Box>

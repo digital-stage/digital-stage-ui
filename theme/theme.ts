@@ -383,7 +383,16 @@ const theme: Theme = {
   },
   forms: {
     checkbox: {
-      color: 'gray.5',
+      color: 'gray.3',
+      width: '16px',
+      height: '16px',
+      ':hover': {
+        bg: '#1212124D',
+      },
+      ':active': {
+        bg: 'primaryActive',
+        color: '#6F9278',
+      },
     },
     select: {
       fontFamily: 'body',
