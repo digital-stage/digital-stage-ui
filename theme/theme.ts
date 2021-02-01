@@ -12,6 +12,7 @@ const theme: Theme = {
     primaryFocus: '#3737F7',
     primaryDisabled: '#5779D980',
     primaryTransparent: '#5779d94D',
+    primaryActiveTransparent: '#6F92F84D',
     secondary: '#F20544',
     secondaryHover: '#b50030',
     secondaryActive: '#fa406b',
@@ -291,7 +292,7 @@ const theme: Theme = {
         bg: 'gray.1',
       },
       ':active': {
-        bg: '#6F92F84D',
+        bg: 'primaryActiveTransparent',
       },
       ':focus': {
         borderColor: 'primaryFocus',
@@ -318,7 +319,7 @@ const theme: Theme = {
         cursor: 'pointer',
       },
       ':active': {
-        bg: '#6F92F84D',
+        bg: 'primaryActiveTransparent',
       },
       ':focus': {
         border: '1px solid transparent',
@@ -382,7 +383,7 @@ const theme: Theme = {
     },
   },
   forms: {
-    checkbox: {
+    checkboxPrimary: {
       color: 'gray.3',
       width: '16px',
       height: '16px',
@@ -390,8 +391,26 @@ const theme: Theme = {
         bg: '#1212124D',
       },
       ':active': {
-        bg: 'primaryActive',
-        color: '#6F9278',
+        bg: 'primaryActiveTransparent',
+        color: 'primaryActive',
+      },
+      ':checked': {
+        color: 'red !important',
+      },
+    },
+    checkboxTertiary: {
+      color: 'gray.3',
+      width: '16px',
+      height: '16px',
+      ':hover': {
+        bg: '#1212124D',
+      },
+      ':active': {
+        bg: 'primaryActiveTransparent',
+        color: 'primaryActive',
+      },
+      '&>path': {
+        color: 'text',
       },
     },
     select: {

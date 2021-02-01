@@ -260,22 +260,26 @@ export default function Home(): JSX.Element {
       </Flex>
       <Flex>
         <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 6 }}>
-          <Input type="text" id="link" name="link" label="Link" />
-          <Input type="password" id="link" name="link" label="Link" />
+          <Input type="text" id="name" name="link" label="Link" />
+          <Input type="password" id="pass" name="link" label="Link" />
         </Box>
         <Box sx={{ width: '50%', bg: 'text', py: 6, px: 6 }}>
-          <Input type="text" id="link" name="link" label="Link" version="dark" />
-          <Input type="password" id="link" name="link" label="Link" version="dark" />
+          <Input type="text" id="lastname" name="link" label="Link" version="dark" />
+          <Input type="password" id="pass2" name="link" label="Link" version="dark" />
         </Box>
       </Flex>
       <Flex>
         <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 6 }}>
           <H3>Checkbox</H3>
-          <Checkbox />
+          <Checkbox checked={true} variant='checkboxPrimary' />
+          <Checkbox checked={false} variant='checkboxPrimary' />
+          <Checkbox checked={true} variant='checkboxTertiary' />
+          <Checkbox checked={false} variant='checkboxTertiary' />
         </Box>
         <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 6 }}>
           <H3>Checkbox</H3>
-          <Checkbox />
+          <Checkbox checked={true} variant='checkboxPrimary' />
+          <Checkbox checked={false} variant='checkboxPrimary' />
         </Box>
       </Flex>
     </Box>
