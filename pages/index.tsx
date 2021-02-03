@@ -18,6 +18,7 @@ import { FiEdit2 } from 'react-icons/fi';
 import DropDown from '../ui/Inputs/Dropdown';
 import Input from '../ui/Inputs/Input';
 import Checkbox from '../ui/Inputs/Checkbox';
+import Radio from '../ui/Inputs/Radio';
 
 export default function Home(): JSX.Element {
   const [toggled, setToggled] = React.useState(false);
@@ -271,15 +272,35 @@ export default function Home(): JSX.Element {
       <Flex>
         <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 6 }}>
           <H3>Checkbox</H3>
-          <Checkbox checked={true} variant='checkboxPrimary' />
-          <Checkbox checked={false} variant='checkboxPrimary' />
-          <Checkbox checked={true} variant='checkboxTertiary' />
-          <Checkbox checked={false} variant='checkboxTertiary' />
+          <Checkbox variant="checkboxPrimary" />
+          <Checkbox variant="checkboxTertiary" />
+          <Checkbox variant="checkboxPrimary" disabled />
+          <Checkbox variant="checkboxTertiary" disabled />
         </Box>
-        <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 6 }}>
+        <Box sx={{ width: '50%', bg: 'text', py: 6, px: 6 }}>
           <H3>Checkbox</H3>
-          <Checkbox checked={true} variant='checkboxPrimary' />
-          <Checkbox checked={false} variant='checkboxPrimary' />
+          <Checkbox variant="checkboxPrimary" />
+          <Checkbox variant="checkboxTertiaryDark" />
+          <Checkbox variant="checkboxPrimary" disabled />
+          <Checkbox variant="checkboxTertiaryDark" disabled />
+        </Box>
+      </Flex>
+      <Flex>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 6 }}>
+          <H3>Radio</H3>
+          <Radio value='vl1' name='dark-mode'
+            defaultChecked label='label1' variant='dark'
+          />
+          <Radio value='vl2' name='dark-mode' label='label2' variant='dark' />
+          <Radio value='vl3' name='dark-mode' label='label3' variant='dark' />
+        </Box>
+        <Box sx={{ width: '50%', bg: 'text', py: 6, px: 6 }}>
+          <H3>Radio</H3>
+          <Radio value='vl1' name='dark-mode'
+            defaultChecked label='label1'
+          />
+          <Radio value='vl2' name='dark-mode' label='label2' />
+          <Radio value='vl3' name='dark-mode' label='label3' />
         </Box>
       </Flex>
     </Box>

@@ -387,30 +387,153 @@ const theme: Theme = {
       color: 'gray.3',
       width: '16px',
       height: '16px',
+      outline: 0,
+      borderRadius: 'radii.button',
       ':hover': {
+        color: '#676767',
         bg: '#1212124D',
       },
       ':active': {
         bg: 'primaryActiveTransparent',
         color: 'primaryActive',
       },
+      ':focus': {
+        color: 'primaryFocus',
+      },
       ':checked': {
-        color: 'red !important',
+        bg: 'primary',
+        color: 'primary',
+        ':hover': {
+          bg: 'primaryHover',
+        },
+        ':focus': {
+          color: 'primaryFocus',
+        },
+      },
+      ':disabled': {
+        opacity: '0.5',
       },
     },
     checkboxTertiary: {
       color: 'gray.3',
       width: '16px',
       height: '16px',
+      outline: 0,
+      borderRadius: 'radii.button',
       ':hover': {
+        color: '#676767',
         bg: '#1212124D',
       },
       ':active': {
         bg: 'primaryActiveTransparent',
         color: 'primaryActive',
       },
-      '&>path': {
+      ':focus': {
+        color: 'primaryFocus',
+      },
+      ':checked': {
+        bg: 'text',
         color: 'text',
+        ':hover': {
+          bg: 'primaryHover',
+        },
+        ':focus': {
+          color: 'primaryFocus',
+        },
+      },
+      ':disabled': {
+        opacity: '0.5',
+      },
+    },
+    checkboxTertiaryDark: {
+      color: 'gray.3',
+      width: '16px',
+      height: '16px',
+      outline: 0,
+      borderRadius: 'radii.button',
+      ':hover': {
+        color: '#676767',
+        bg: '#1212124D',
+      },
+      ':active': {
+        bg: 'primaryActiveTransparent',
+        color: 'primaryActive',
+      },
+      ':focus': {
+        color: 'primaryFocus',
+      },
+      ':checked': {
+        bg: 'gray.3',
+        color: 'gray.3',
+        ':hover': {
+          bg: 'primaryHover',
+        },
+        ':focus': {
+          color: 'primaryFocus',
+        },
+      },
+      ':disabled': {
+        opacity: '0.5',
+      },
+    },
+    radio: {
+      width: '16px',
+      height: '16px',
+      color: 'gray.3',
+      ':hover': {
+        color: '#676767',
+        bg: '#1212124D',
+      },
+      ':active': {
+        bg: 'primaryActiveTransparent',
+        color: 'primaryActive',
+      },
+      ':focus': {
+        color: 'primaryFocus',
+      },
+      ':checked': {
+        bg: 'primary',
+        color: 'primary',
+        ':hover': {
+          bg: 'primaryHover',
+        },
+        ':focus': {
+          color: 'primaryFocus',
+        },
+      },
+      ':disabled': {
+        opacity: '0.5',
+      },
+    },
+    radioTertiaryLight: {
+      color: 'gray.3',
+      width: '16px',
+      height: '16px',
+      outline: 0,
+      borderRadius: 'radii.button',
+      ':hover': {
+        color: '#676767',
+        bg: '#1212124D',
+      },
+      ':active': {
+        bg: 'primaryActiveTransparent',
+        color: 'primaryActive',
+      },
+      ':focus': {
+        color: 'primaryFocus',
+      },
+      ':checked': {
+        bg: 'text',
+        color: 'text',
+        ':hover': {
+          bg: 'primaryHover',
+        },
+        ':focus': {
+          color: 'primaryFocus',
+        },
+      },
+      ':disabled': {
+        opacity: '0.5',
       },
     },
     select: {
