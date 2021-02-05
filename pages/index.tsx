@@ -19,6 +19,7 @@ import DropDown from '../ui/Inputs/Dropdown';
 import Input from '../ui/Inputs/Input';
 import Checkbox from '../ui/Inputs/Checkbox';
 import Radio from '../ui/Inputs/Radio';
+import Tab from '../ui/Inputs/Tab';
 
 export default function Home(): JSX.Element {
   const [toggled, setToggled] = React.useState(false);
@@ -288,20 +289,26 @@ export default function Home(): JSX.Element {
       <Flex>
         <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 6 }}>
           <H3>Radio</H3>
-          <Radio value='vl1' name='dark-mode'
-            defaultChecked label='label1' variant='dark'
-          />
-          <Radio value='vl2' name='dark-mode' label='label2' variant='dark' />
-          <Radio value='vl3' name='dark-mode' label='label3' variant='dark' />
+          <Radio value="vl1" name="dark-mode" defaultChecked label="label1" labelVariant="dark" />
+          <Radio value="vl2" name="dark-mode" label="label2" labelVariant="dark" />
+          <Radio value="vl3" name="dark-mode" label="label3" labelVariant="dark" />
         </Box>
         <Box sx={{ width: '50%', bg: 'text', py: 6, px: 6 }}>
           <H3>Radio</H3>
-          <Radio value='vl1' name='dark-mode'
-            defaultChecked label='label1'
-          />
-          <Radio value='vl2' name='dark-mode' label='label2' />
-          <Radio value='vl3' name='dark-mode' label='label3' />
+          <Radio value="vl1" name="dark-mode" defaultChecked label="label1" />
+          <Radio value="vl2" name="dark-mode" label="label2" />
+          <Radio value="vl3" name="dark-mode" label="label3" />
         </Box>
+      </Flex>
+      <Flex>
+        <Box sx={{ width: '50%', bg: 'gray.4', py: 6, px: 6 }}>
+          <H3>Tabs</H3>
+          <Box sx={{ width: 'fit-content' }}>
+            <Tab disabled>Disabled</Tab>
+            <Tab sx={{ ml: 4 }}>Global</Tab>
+          </Box>
+        </Box>
+        <Box sx={{ width: '50%', bg: 'text', py: 6, px: 6 }}></Box>
       </Flex>
     </Box>
   );

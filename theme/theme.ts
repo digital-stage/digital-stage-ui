@@ -505,37 +505,6 @@ const theme: Theme = {
         opacity: '0.5',
       },
     },
-    radioTertiaryLight: {
-      color: 'gray.3',
-      width: '16px',
-      height: '16px',
-      outline: 0,
-      borderRadius: 'radii.button',
-      ':hover': {
-        color: '#676767',
-        bg: '#1212124D',
-      },
-      ':active': {
-        bg: 'primaryActiveTransparent',
-        color: 'primaryActive',
-      },
-      ':focus': {
-        color: 'primaryFocus',
-      },
-      ':checked': {
-        bg: 'text',
-        color: 'text',
-        ':hover': {
-          bg: 'primaryHover',
-        },
-        ':focus': {
-          color: 'primaryFocus',
-        },
-      },
-      ':disabled': {
-        opacity: '0.5',
-      },
-    },
     select: {
       fontFamily: 'body',
       fontWeight: 'body',
@@ -564,6 +533,32 @@ const theme: Theme = {
         bg: 'textfieldDark',
         color: '#f4f4f44D',
         borderColour: '#f4f4f44D',
+        opacity: '0.5',
+      },
+    },
+  },
+  links: {
+    bold: {
+      fontWeight: 'bold',
+    },
+    nav: {
+      color: 'text',
+      textDecoration: 'none',
+      borderBottom: '2px solid',
+      borderColor: 'primary',
+      ':hover': {
+        borderColor: 'primaryHover',
+        color: 'primaryHover',
+      },
+      ':active': {
+        borderColor: 'primaryActive',
+        color: 'primaryActive',
+      },
+      ':focus': {
+        borderColor: 'primaryFocus',
+        color: 'text',
+      },
+      ':disabled': {
         opacity: '0.5',
       },
     },

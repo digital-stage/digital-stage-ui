@@ -10,7 +10,7 @@ const H1 = (props: Props): JSX.Element => {
   return (
     <Heading
       variant="h1"
-      sx={{ ...props.sx, color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 5 }}
+      sx={{ color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 5, ...props.sx }}
     >
       {props.children}
     </Heading>
@@ -21,7 +21,7 @@ const H2 = (props: Props): JSX.Element => {
   return (
     <Heading
       variant="h2"
-      sx={{ ...props.sx, color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 2 }}
+      sx={{ color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 2, ...props.sx }}
     >
       {props.children}
     </Heading>
@@ -32,7 +32,7 @@ const H3 = (props: Props): JSX.Element => {
   return (
     <Heading
       variant="h3"
-      sx={{ ...props.sx, color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 6 }}
+      sx={{ color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 6, ...props.sx }}
     >
       {props.children}
     </Heading>
@@ -40,10 +40,11 @@ const H3 = (props: Props): JSX.Element => {
 };
 
 const H4 = (props: Props): JSX.Element => {
+  console.log(props.sx);
   return (
     <Heading
       variant="h4"
-      sx={{ ...props.sx, color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 5 }}
+      sx={{ color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 5, ...props.sx }}
     >
       {props.children}
     </Heading>
@@ -54,7 +55,7 @@ const H5 = (props: Props): JSX.Element => {
   return (
     <Heading
       variant="h5"
-      sx={{ ...props.sx, color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 2 }}
+      sx={{ color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 2, ...props.sx }}
     >
       {props.children}
     </Heading>
@@ -65,7 +66,7 @@ const H6 = (props: Props): JSX.Element => {
   return (
     <Heading
       variant="h6"
-      sx={{ ...props.sx, color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 5 }}
+      sx={{ color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 5, ...props.sx }}
     >
       {props.children}
     </Heading>
