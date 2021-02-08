@@ -10,7 +10,7 @@ const Regular = (props: Props): JSX.Element => {
   return (
     <Text
       variant="regular"
-      sx={{ ...props.sx, color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 2 }}
+      sx={{ color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 2, ...props.sx }}
     >
       {props.children}
     </Text>
@@ -21,7 +21,13 @@ const Micro = (props: Props): JSX.Element => {
   return (
     <Text
       variant="micro"
-      sx={{ ...props.sx, color: props.variant === 'dark' ? 'background' : 'text', ml: 6, mb: 5 }}
+      sx={{
+        ...props.sx,
+        color: props.variant === 'dark' ? 'background' : 'text',
+        ml: 6,
+        mb: 5,
+        ...props.sx,
+      }}
     >
       {props.children}
     </Text>
