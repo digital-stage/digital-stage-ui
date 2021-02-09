@@ -40,7 +40,6 @@ const H3 = (props: Props): JSX.Element => {
 };
 
 const H4 = (props: Props): JSX.Element => {
-  console.log(props.sx);
   return (
     <Heading
       variant="h4"

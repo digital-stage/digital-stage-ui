@@ -20,6 +20,7 @@ import Input from '../ui/Inputs/Input';
 import Checkbox from '../ui/Inputs/Checkbox';
 import Radio from '../ui/Inputs/Radio';
 import Tab from '../ui/Inputs/Tab';
+import Link from 'next/link';
 
 export default function Home(): JSX.Element {
   const [toggled, setToggled] = React.useState(false);
@@ -306,6 +307,9 @@ export default function Home(): JSX.Element {
           <Box sx={{ width: 'fit-content' }}>
             <Tab disabled>Disabled</Tab>
             <Tab sx={{ ml: 4 }}>Global</Tab>
+          </Box>
+          <Box>
+            <Link href="/components">Components</Link>
           </Box>
         </Box>
         <Box sx={{ width: '50%', bg: 'text', py: 6, px: 6 }}></Box>

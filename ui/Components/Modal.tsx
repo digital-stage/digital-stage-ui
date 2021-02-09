@@ -12,7 +12,7 @@ export const ModalHeader = (props: {
   return (
     <Flex sx={{ justifyContent: 'space-between', alignItems: 'center', mb: 5 }}>
       <Box>
-        <H4 sx={{ ml: 0, ...sx }} variant="dark">
+        <H4 sx={{ ml: 0, mb: 0, ...sx }} variant="dark">
           {children}
         </H4>
       </Box>
