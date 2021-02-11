@@ -563,6 +563,11 @@ const theme: Theme = {
       },
     },
   },
+  styles: {
+    a: {
+      textDecoration: 'none',
+    },
+  },
 };
 
 export default theme;

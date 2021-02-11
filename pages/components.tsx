@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Button, Flex, IconButton } from 'theme-ui';
+import { Box, Button, Flex } from 'theme-ui';
 import Sidebar from '../ui/Components/Sidebar';
-import { H3, H4, H6 } from '../ui/Typography/Heading';
+import { H3, H4 } from '../ui/Typography/Heading';
 import { CenteredNavItems, LowerNavItems } from '../utils/Navbar';
 import DigitalStageLogo from '../ui/DigitalStageLogo';
 import Modal, { ModalBody, ModalFooter, ModalHeader } from '../ui/Components/Modal';
@@ -22,7 +22,7 @@ const Components = () => {
   const [isCollapseOpen1, setIsCollapseOpen1] = React.useState<boolean>(false);
 
   return (
-    <Box>
+    <Box sx={{ minWidth: 'calc(100% - 20vw)' }}>
       <Box sx={{ bg: 'text' }}>
         <H3 variant="dark">Sidebar</H3>
         <Sidebar
