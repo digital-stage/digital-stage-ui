@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Flex } from 'theme-ui';
-import Prism from 'Prismjs';
+import Prism from 'prismjs';
 import { PrimaryIconButton } from '../Inputs/IconButton';
 import { FiCopy } from 'react-icons/fi';
 import { FcCheckmark } from 'react-icons/fc';
