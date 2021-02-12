@@ -39,10 +39,11 @@ type ModalProps = {
   backDrop?: boolean;
   onClose(): void;
   isOpen: boolean;
+  large?: boolean;
 };
 
 const Modal = (props: React.ComponentPropsWithRef<'div'> & ModalProps): JSX.Element => {
-  const { children, backDrop, onClose, isOpen } = props;
+  const { children, backDrop, onClose, isOpen, large } = props;
 
   const handleBackdrop = React.useCallback(() => {
     if (backDrop && onClose) {
@@ -78,7 +79,7 @@ const Modal = (props: React.ComponentPropsWithRef<'div'> & ModalProps): JSX.Elem
           sx={{
             flexDirection: 'column',
             position: 'absolute',
-            width: '360px',
+            width: large ? '560px' : '360px',
             bg: 'text',
             borderRadius: '18px',
             p: 6,

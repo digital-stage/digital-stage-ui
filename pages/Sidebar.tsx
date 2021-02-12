@@ -1,13 +1,14 @@
 import React from 'react';
 import { Box, Flex, Image, Link } from 'theme-ui';
-import { H4, H6 } from '../ui/Typography/Heading';
+import { Micro } from '../ui/Typography/Body';
+import { H5 } from '../ui/Typography/Heading';
 
 const Sidebar = () => {
   return (
     <Box
       sx={{
-        width: '30vw',
-        minWidth: '30vw',
+        width: '25vw',
+        minWidth: '25vw',
         maxHeight: '100vh',
         overflowY: 'scroll',
         '::-webkit-scrollbar': {
@@ -20,7 +21,6 @@ const Sidebar = () => {
           flexDirection: 'column',
           height: '100%',
           textAlign: 'left',
-          ml: 7,
           width: '100%',
         }}
       >
@@ -34,45 +34,72 @@ const Sidebar = () => {
           >
             <Image src="/logo.png" width="180" />
           </Link>
-          {/* <H5 sx={{ color: 'secondary', ml: 6 }}>digital-stage-ui</H5> */}
         </Box>
-        <H4>Typography</H4>
+        <H5 sx={{ mb: 3 }}>Typography</H5>
         <Box sx={{ ml: 4 }}>
           <Link href="/components/heading">
-            <H6>Heading</H6>
+            <Micro>Heading</Micro>
           </Link>
           <Link href="/components/body">
-            <H6>Body</H6>
+            <Micro>Body</Micro>
           </Link>
         </Box>
-        <H4>Layout</H4>
+        <H5 sx={{ mb: 3 }}>Layout</H5>
         <Box sx={{ ml: 4 }}>
-          <H6>Box</H6>
-          <H6>Flex</H6>
-          <H6>Panel</H6>
+          <Link href="/components/box">
+            <Micro>Box</Micro>
+          </Link>
+          <Link href="/components/flex">
+            <Micro>Flex</Micro>
+          </Link>
+          <Link href="/components/panel">
+            <Micro>Panel</Micro>
+          </Link>
         </Box>
-        <H4>Inputs</H4>
+        <H5 sx={{ mb: 3 }}>Inputs</H5>
         <Box sx={{ ml: 4 }}>
           <Link href="/components/button">
-            <H6>Button</H6>
+            <Micro>Button</Micro>
           </Link>
-          <H6>Close Button</H6>
-          <H6>Toggle Icon Button</H6>
-          <H6>Function Icon Button</H6>
-          <H6>Icon Button</H6>
-          <H6>Checkbox</H6>
-          <H6>Dropdown</H6>
-          <H6>Input</H6>
-          <H6>Radio</H6>
-          <H6>Tab</H6>
+          <Link href="/components/close">
+            <Micro>Close Button</Micro>
+          </Link>
+          <Link href="/components/toggle">
+            <Micro>Toggle Icon Button</Micro>
+          </Link>
+          <Link href="/components/function">
+            <Micro>Function Icon Button</Micro>
+          </Link>
+          <Link href="/components/icon">
+            <Micro>Icon Button</Micro>
+          </Link>
+          <Link href="/components/checkbox">
+            <Micro>Checkbox</Micro>
+          </Link>
+          <Link href="/components/dropdown">
+            <Micro>Dropdown</Micro>
+          </Link>
+          <Link href="/components/input">
+            <Micro>Input</Micro>
+          </Link>
+          <Link href="/components/radio">
+            <Micro>Radio</Micro>
+          </Link>
+          <Link href="/components/tabs">
+            <Micro>Tab</Micro>
+          </Link>
         </Box>
-        <H4>Components</H4>
+        <H5 sx={{ mb: 3 }}>Components</H5>
         <Box sx={{ ml: 4 }}>
-          <H6>Collapse</H6>
-          <H6>Modal</H6>
-          <H6>Sidebar</H6>
-          <H6>Group details</H6>
-          <H6>Stage details</H6>
+          <Link href="/components/accordion">
+            <Micro>Collapse</Micro>
+          </Link>
+          <Link href="/components/dialog">
+            <Micro>Modal</Micro>
+          </Link>
+          <Link href="/components/sidemenu">
+            <Micro>Sidebar</Micro>
+          </Link>
         </Box>
       </Flex>
     </Box>

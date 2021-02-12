@@ -11,7 +11,7 @@ const Radio = (props: React.ComponentPropsWithRef<'input'> & Props): JSX.Element
   const { label, labelVariant } = props;
 
   return (
-    <Label sx={{ color: labelVariant === 'dark' ? 'text' : 'background' }}>
+    <Label sx={{ color: labelVariant === 'dark' ? 'background' : 'text' }}>
       <MaterialUiRadio {...props} />
       {label}
     </Label>

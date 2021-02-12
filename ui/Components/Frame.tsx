@@ -7,8 +7,8 @@ const Frame = (props: { children: React.ReactNode }) => {
   return (
     <Flex
       sx={{
-        minWidth: 'calc(100% - 30vw)',
-        width: 'calc(100% - 30vw)',
+        minWidth: 'calc(100% - 25vw)',
+        width: 'calc(100% - 25vw)',
         p: 0,
         m: 0,
         maxHeight: '100vh',

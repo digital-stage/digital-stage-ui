@@ -6,11 +6,12 @@ type Props = {
   label?: string;
   variant: 'checkboxPrimary' | 'checkboxTertiary' | 'checkboxTertiaryDark';
   sx?: SxStyleProp;
+  labelDark?: boolean;
 };
 
 const Checkbox = (props: React.ComponentPropsWithRef<'input'> & Props): JSX.Element => {
   const [checked, setChecked] = React.useState(true);
-  const { label, variant, disabled } = props;
+  const { label, variant, disabled, labelDark } = props;
 
   const handleCheckbox = () => {
     !props.disabled && setChecked(!checked);
@@ -38,7 +39,10 @@ const Checkbox = (props: React.ComponentPropsWithRef<'input'> & Props): JSX.Elem
           onClick={handleCheckbox}
         />
       )}
-      <Heading variant="micro" sx={{ display: 'inline-block', pl: 3 }}>
+      <Heading
+        variant="micro"
+        sx={{ display: 'inline-block', pl: 3, color: labelDark && 'background' }}
+      >
         {label}
       </Heading>
     </Flex>

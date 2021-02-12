@@ -8,7 +8,7 @@ import { H3 } from '../../ui/Typography/Heading';
 const Body = () => {
   return (
     <Frame>
-      <Box sx={{ minWidth: '100%', width: '100%', bg: 'gray.4', py: 5 }}>
+      <Box sx={{ minWidth: '100%', width: '100%', bg: 'gray.4', py: 5, minHeight: '50vh' }}>
         <H3>Typography body</H3>
         <Regular>Regular copy</Regular>
         <Micro>Micro copy</Micro>
@@ -17,7 +17,7 @@ const Body = () => {
 <Micro>Micro copy</Micro>`}
         </Code>
       </Box>
-      <Box sx={{ minWidth: '100%', width: '100%', bg: 'text', py: 5 }}>
+      <Box sx={{ minWidth: '100%', width: '100%', bg: 'text', py: 5, minHeight: '50vh' }}>
         <H3 variant="dark">Typography body - light background</H3>
         <Regular variant="dark">Regular copy</Regular>
         <Micro variant="dark">Micro copy</Micro>

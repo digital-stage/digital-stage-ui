@@ -9,12 +9,12 @@ type Props = {
 const PrimaryFunctionIconButton = (
   props: React.ComponentPropsWithRef<'button'> & Props
 ): JSX.Element => {
-  const { children, text } = props;
+  const { children, text, sx } = props;
   return (
     <Button
       variant="functionPrimaryIcon"
       {...props}
-      sx={{ color: text === 'dark' ? 'background' : 'text' }}
+      sx={{ color: text === 'dark' ? 'background' : 'text', ...sx }}
     >
       {children}
     </Button>
@@ -24,12 +24,12 @@ const PrimaryFunctionIconButton = (
 const DangerFunctionIconButton = (
   props: React.ComponentPropsWithRef<'button'> & Props
 ): JSX.Element => {
-  const { children, text } = props;
+  const { children, text, sx } = props;
   return (
     <Button
       variant="functionDangerIcon"
       {...props}
-      sx={{ color: text === 'dark' ? 'background' : 'text' }}
+      sx={{ color: text === 'dark' ? 'background' : 'text', ...sx }}
     >
       {children}
     </Button>

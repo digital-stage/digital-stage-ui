@@ -13,7 +13,7 @@ interface Props extends React.ComponentProps<'input'> {
   ref?: React.Ref<HTMLInputElement>;
 }
 
-const Input = ({ id, label, name, error, version, type, ...rest }: Props): JSX.Element => {
+const Input = ({ id, label, name, error, version, type, sx, ...rest }: Props): JSX.Element => {
   const [inputType, setInputType] = React.useState<string>(type);
 
   const resetDisabledSelectOptionColor: CSSProperties = {
@@ -39,6 +39,7 @@ const Input = ({ id, label, name, error, version, type, ...rest }: Props): JSX.E
             borderBottom: error ? '1px solid dangerUnderline' : '1px solid transparent',
             borderColor: 'primaryFocus',
           },
+          ...sx,
         }}
       >
         <Label

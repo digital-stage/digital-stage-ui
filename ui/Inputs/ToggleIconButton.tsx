@@ -21,12 +21,16 @@ const PrimaryToggleIconButton = (
 const TertiaryToggleIconButton = (
   props: React.ComponentPropsWithRef<'button'> & Props
 ): JSX.Element => {
-  const { children, color, toggled } = props;
+  const { children, color, sx, toggled } = props;
   return (
     <Button
       variant={toggled ? 'toggleOnTertiaryIcon' : 'toggleOfPrimaryIcon'}
       {...props}
-      sx={{ bg: !toggled ? (color === 'dark' ? 'background' : 'text') : 'tertiary', border: 0 }}
+      sx={{
+        bg: !toggled ? (color === 'dark' ? 'background' : 'text') : 'tertiary',
+        border: 0,
+        ...sx,
+      }}
     >
       {children}
     </Button>
