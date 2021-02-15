@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImPhoneHangUp } from 'react-icons/im';
-import { Box } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
 import Code from '../../ui/Components/Code';
 import Frame from '../../ui/Components/Frame';
 import {
@@ -81,8 +81,8 @@ const handleToggleTertiary = () => {
 </TertiaryToggleIconButton>`}</Code>
       </Box>
       <Box sx={{ minWidth: '100%', width: '100%', bg: 'text', py: 5 }}>
-        <H3 variant="dark">Toggle button</H3>
-        <H4 sx={{ mt: 4 }} variant="dark">
+        <H3 darkMode>Toggle button</H3>
+        <H4 sx={{ mt: 4 }} darkMode>
           Primary toggle
         </H4>
         <Box ml={7}>
@@ -99,25 +99,25 @@ const handleToggleTertiary = () => {
 <PrimaryToggleIconButton disabled>
     <ImPhoneHangUp size="24px" />
 </PrimaryToggleIconButton>`}</Code>
-        <H4 sx={{ mt: 4 }} variant="dark">
+        <H4 sx={{ mt: 4 }} darkMode>
           Tertiary toggle
         </H4>
         <Box ml={7}>
           <TertiaryToggleIconButton
             toggled={toggleTertiary}
             onClick={handleToggleTertiary}
-            color="dark"
+            darkMode
           >
             <ImPhoneHangUp size="24px" color="#f4f4f4" />
           </TertiaryToggleIconButton>
-          <TertiaryToggleIconButton disabled color="dark" sx={{ ml: 4 }}>
+          <TertiaryToggleIconButton disabled darkMode sx={{ ml: 4 }}>
             <ImPhoneHangUp size="24px" color="#f4f4f4" />
           </TertiaryToggleIconButton>
         </Box>
-        <Code language="language-html">{`<TertiaryToggleIconButton toggled={toggleTertiary} onClick={handleToggleTertiary} color="dark">
+        <Code language="language-html">{`<TertiaryToggleIconButton toggled={toggleTertiary} onClick={handleToggleTertiary} darkMode>
     <ImPhoneHangUp size="24px" color="#f4f4f4" />
 </TertiaryToggleIconButton>
-<TertiaryToggleIconButton disabled color="dark">
+<TertiaryToggleIconButton disabled darkMode>
     <ImPhoneHangUp size="24px" color="#f4f4f4" />
 </TertiaryToggleIconButton>`}</Code>
       </Box>

@@ -1,8 +1,7 @@
 import React from 'react';
 import Flex from '../ui/Layout/Flex';
-import Box from '../ui/Layout/Box';
 import Frame from '../ui/Components/Frame';
-import { H3 } from '../ui/Typography/Heading';
+import { H4 } from '../ui/Typography/Heading';
 import { Image } from 'theme-ui';
 
 export default function Home(): JSX.Element {
@@ -18,13 +17,14 @@ export default function Home(): JSX.Element {
         sx={{
           width: '100%',
           height: '100%',
-          justifyContent: 'space-around',
+          justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'column',
+          bg: '#000000',
         }}
       >
-        <Image src="./text-logo.png" width="300px" />
-        <H3> The design system for digital-stage</H3>
+        <Image src="./text-logo.png" width="200px" />
+        <H4> The design system for digital-stage</H4>
       </Flex>
     </Frame>
   );

@@ -2,7 +2,7 @@ import { Button, SxStyleProp } from 'theme-ui';
 
 type Props = {
   children?: React.ReactNode;
-  color?: 'light' | 'dark';
+  darkMode?: boolean;
   sx?: SxStyleProp;
   toggled?: boolean;
 };
@@ -21,13 +21,13 @@ const PrimaryToggleIconButton = (
 const TertiaryToggleIconButton = (
   props: React.ComponentPropsWithRef<'button'> & Props
 ): JSX.Element => {
-  const { children, color, sx, toggled } = props;
+  const { children, darkMode, sx, toggled } = props;
   return (
     <Button
       variant={toggled ? 'toggleOnTertiaryIcon' : 'toggleOfPrimaryIcon'}
       {...props}
       sx={{
-        bg: !toggled ? (color === 'dark' ? 'background' : 'text') : 'tertiary',
+        bg: !toggled ? (darkMode ? 'background' : 'text') : 'tertiary',
         border: 0,
         ...sx,
       }}

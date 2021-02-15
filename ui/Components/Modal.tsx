@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Flex, SxStyleProp } from 'theme-ui';
+import { SxStyleProp } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
+import Flex from '../../ui/Layout/Flex';
 import CloseButton from '../Inputs/CloseButton';
 import { H4 } from '../Typography/Heading';
 
@@ -12,7 +14,7 @@ export const ModalHeader = (props: {
   return (
     <Flex sx={{ justifyContent: 'space-between', alignItems: 'center', mb: 5 }}>
       <Box>
-        <H4 sx={{ ml: 0, mb: 0, ...sx }} variant="dark">
+        <H4 sx={{ ml: 0, mb: 0, ...sx }} darkMode>
           {children}
         </H4>
       </Box>

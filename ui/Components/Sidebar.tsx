@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Flex, Link, SxStyleProp } from 'theme-ui';
+import { Link, SxStyleProp } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
+import Flex from '../../ui/Layout/Flex';
 import NavItem from '../../utils/NavItem';
 import { H6 } from '../Typography/Heading';
 

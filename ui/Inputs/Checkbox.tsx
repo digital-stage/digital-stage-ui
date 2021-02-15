@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Flex, Input, SxStyleProp, Heading } from 'theme-ui';
 import { BiCheck } from 'react-icons/bi';
 
@@ -6,12 +6,12 @@ type Props = {
   label?: string;
   variant: 'checkboxPrimary' | 'checkboxTertiary' | 'checkboxTertiaryDark';
   sx?: SxStyleProp;
-  labelDark?: boolean;
+  darkMode?: boolean;
 };
 
 const Checkbox = (props: React.ComponentPropsWithRef<'input'> & Props): JSX.Element => {
   const [checked, setChecked] = React.useState(true);
-  const { label, variant, disabled, labelDark } = props;
+  const { label, variant, disabled, darkMode } = props;
 
   const handleCheckbox = () => {
     !props.disabled && setChecked(!checked);
@@ -41,7 +41,7 @@ const Checkbox = (props: React.ComponentPropsWithRef<'input'> & Props): JSX.Elem
       )}
       <Heading
         variant="micro"
-        sx={{ display: 'inline-block', pl: 3, color: labelDark && 'background' }}
+        sx={{ display: 'inline-block', pl: 3, color: darkMode && 'background' }}
       >
         {label}
       </Heading>

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Flex, Image, SxStyleProp } from 'theme-ui';
+import { Image } from 'theme-ui';
+import Flex from '../../ui/Layout/Flex';
 import { H6 } from '../Typography/Heading';
-import { Micro } from '../Typography/Body';
 import { BsMusicNoteBeamed } from 'react-icons/bs';
 
 type Props = {
@@ -34,9 +34,7 @@ const GroupDetails = (props: React.ComponentPropsWithRef<'div'> & Props): JSX.El
         />
       )}
       <Flex sx={{ flexDirection: 'column', justifyContent: 'center' }}>
-        <H6 sx={{ mb: 0 }} variant="light">
-          {name}
-        </H6>
+        <H6 sx={{ mb: 0 }}>{name}</H6>
       </Flex>
     </Flex>
   );

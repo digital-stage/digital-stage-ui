@@ -1,12 +1,11 @@
 import React from 'react';
-import { Box } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
 import Code from '../../ui/Components/Code';
 import Frame from '../../ui/Components/Frame';
 import { H3 } from '../../ui/Typography/Heading';
 import { CenteredNavItems, LowerNavItems } from '../../utils/Navbar';
 import DigitalStageLogo from '../../ui/DigitalStageLogo';
 import Sidebar from '../../ui/Components/Sidebar';
-import GroupDetails from '../../ui/Components/GroupDetails';
 
 const SideMenu = () => {
   return (

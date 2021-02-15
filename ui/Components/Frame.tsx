@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex } from 'theme-ui';
+import Flex from '../../ui/Layout/Flex';
 
 const Frame = (props: { children: React.ReactNode }) => {
   const { children } = props;

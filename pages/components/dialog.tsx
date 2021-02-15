@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiPlus } from 'react-icons/bi';
-import { Box, Button } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
 import Code from '../../ui/Components/Code';
 import Frame from '../../ui/Components/Frame';
 import Modal, { ModalBody, ModalFooter, ModalHeader } from '../../ui/Components/Modal';
@@ -21,7 +21,7 @@ const dialog = () => {
           <Modal backDrop={backDrop} isOpen={open} onClose={() => setOpen(!open)}>
             <ModalHeader onClick={() => setOpen(false)}>Title</ModalHeader>
             <ModalBody>
-              <Regular sx={{ ml: 0 }} variant="dark">
+              <Regular sx={{ ml: 0 }} darkMode>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae autem esse quaerat id
                 adipisci repellat saepe optio repellendus nisi doloribus, libero, obcaecati velit
                 repudiandae cumque magni corporis nulla rerum nihil. Eligendi in atque incidunt,
@@ -29,7 +29,7 @@ const dialog = () => {
               </Regular>
             </ModalBody>
             <ModalFooter>
-              <TertiaryButton text="dark" onClick={() => setOpen(false)}>
+              <TertiaryButton darkMode onClick={() => setOpen(false)}>
                 Close
               </TertiaryButton>
               <PrimaryButton>
@@ -37,7 +37,7 @@ const dialog = () => {
               </PrimaryButton>
             </ModalFooter>
           </Modal>
-          <Button onClick={() => setOpen(true)}>Open modal</Button>
+          <PrimaryButton onClick={() => setOpen(true)}>Open modal</PrimaryButton>
         </Box>
         <Code language="language-javascript">{`... 
 const Dialog = () => {
@@ -48,7 +48,7 @@ const Dialog = () => {
         <Modal backDrop={backDrop} isOpen={open} onClose={() => setOpen(!open)}>
             <ModalHeader onClick={() => setOpen(false)}>Title</ModalHeader>
             <ModalBody>
-                <Regular sx={{ ml: 0 }} variant="dark">
+                <Regular sx={{ ml: 0 }} darkMode>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae autem esse quaerat id
                     adipisci repellat saepe optio repellendus nisi doloribus, libero, obcaecati velit
                     repudiandae cumque magni corporis nulla rerum nihil. Eligendi in atque incidunt,
@@ -56,7 +56,7 @@ const Dialog = () => {
                 </Regular>
             </ModalBody>
             <ModalFooter>
-                <TertiaryButton text="dark" onClick={() => setOpen(false)}>
+                <TertiaryButton darkMode onClick={() => setOpen(false)}>
                     Close
                 </TertiaryButton>
                 <PrimaryButton>
@@ -64,7 +64,7 @@ const Dialog = () => {
                 </PrimaryButton>
             </ModalFooter>
         </Modal>
-        <Button onClick={() => setOpen(true)}>Open modal</Button>
+        <PrimaryButton onClick={() => setOpen(true)}>Open modal</PrimaryButton>
     );
 };
 
@@ -80,7 +80,7 @@ export default Dialog;
           >
             <ModalHeader onClick={() => setOpenLarge(false)}>Large modal</ModalHeader>
             <ModalBody>
-              <Regular sx={{ ml: 0 }} variant="dark">
+              <Regular sx={{ ml: 0 }} darkMode>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae autem esse quaerat id
                 adipisci repellat saepe optio repellendus nisi doloribus, libero, obcaecati velit
                 repudiandae cumque magni corporis nulla rerum nihil. Eligendi in atque incidunt,
@@ -88,7 +88,7 @@ export default Dialog;
               </Regular>
             </ModalBody>
             <ModalFooter>
-              <TertiaryButton text="dark" onClick={() => setOpenLarge(false)}>
+              <TertiaryButton darkMode onClick={() => setOpenLarge(false)}>
                 Close
               </TertiaryButton>
               <PrimaryButton>
@@ -96,7 +96,7 @@ export default Dialog;
               </PrimaryButton>
             </ModalFooter>
           </Modal>
-          <Button onClick={() => setOpenLarge(true)}>Open large modal</Button>
+          <PrimaryButton onClick={() => setOpenLarge(true)}>Open large modal</PrimaryButton>
         </Box>
         <Code language="language-javascript">{`... 
 <Modal ... large={true}>

@@ -2,7 +2,7 @@ import { Button, SxStyleProp } from 'theme-ui';
 
 type Props = {
   children?: React.ReactNode;
-  text?: 'light' | 'dark';
+  darkMode?: boolean;
   sx?: SxStyleProp;
 };
 

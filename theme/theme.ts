@@ -314,7 +314,7 @@ const theme: Theme = {
       p: 0,
       bg: 'transparent',
       ':hover': {
-        bg: 'gray.2',
+        bg: '#415CA74D',
         color: 'gray.3',
         cursor: 'pointer',
       },
@@ -337,8 +337,9 @@ const theme: Theme = {
       width: '32px',
       height: '32px',
       bg: 'transparent',
+      boxShadow: 0,
       ':hover': {
-        bg: 'gray.5',
+        bg: '#415CA74D',
         cursor: 'pointer',
       },
       ':active': {
@@ -364,8 +365,9 @@ const theme: Theme = {
       width: '32px',
       height: '32px',
       bg: 'transparent',
+      boxShadow: 0,
       ':hover': {
-        bg: 'gray.5',
+        bg: '#415CA74D',
         cursor: 'pointer',
       },
       ':active': {

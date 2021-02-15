@@ -9,15 +9,15 @@ interface Props extends React.ComponentProps<'input'> {
   label: string;
   name: string;
   error?: string;
-  version?: string;
+  darkMode?: boolean;
   ref?: React.Ref<HTMLInputElement>;
 }
 
-const Input = ({ id, label, name, error, version, type, sx, ...rest }: Props): JSX.Element => {
+const Input = ({ id, label, name, error, darkMode, type, sx, ...rest }: Props): JSX.Element => {
   const [inputType, setInputType] = React.useState<string>(type);
 
   const resetDisabledSelectOptionColor: CSSProperties = {
-    WebkitTextFillColor: version === 'dark' ? 'labelDark' : '#f4f4f4',
+    WebkitTextFillColor: darkMode ? 'labelDark' : '#f4f4f4',
   };
 
   return (
@@ -25,11 +25,11 @@ const Input = ({ id, label, name, error, version, type, sx, ...rest }: Props): J
       <Box
         sx={{
           position: 'relative',
-          bg: error ? 'dangerBg' : version === 'dark' ? 'text' : 'textfield',
+          bg: error ? 'dangerBg' : darkMode ? 'text' : 'textfield',
           borderBottom: '1px solid transparent',
-          borderBottomColor: error ? 'dangerUnderline' : version === 'dark' ? 'background' : 'text',
+          borderBottomColor: error ? 'dangerUnderline' : darkMode ? 'background' : 'text',
           ':hover': {
-            bg: error ? 'dangerBg' : version === 'dark' ? 'textfieldDark' : 'gray.6',
+            bg: error ? 'dangerBg' : darkMode ? 'textfieldDark' : 'gray.6',
             borderBottomColor: error ? 'dangerUnderline' : 'primaryHover',
           },
           ':focus': {
@@ -53,7 +53,7 @@ const Input = ({ id, label, name, error, version, type, sx, ...rest }: Props): J
             fontSize: 12,
             fontFamily: 'body',
             fontWeight: 'heading',
-            color: version === 'dark' ? 'labelDark' : 'label',
+            color: darkMode ? 'labelDark' : 'label',
             userSelect: 'none',
           }}
         >
@@ -65,7 +65,7 @@ const Input = ({ id, label, name, error, version, type, sx, ...rest }: Props): J
           type={inputType}
           {...rest}
           sx={{
-            color: version === 'dark' ? 'background' : 'text',
+            color: darkMode ? 'background' : 'text',
             borderColor: 'transparent',
             borderBottom: 0,
             borderRadius: 0,
@@ -80,12 +80,12 @@ const Input = ({ id, label, name, error, version, type, sx, ...rest }: Props): J
               // ThemeUI color does not work on this prop thus white instead of text
               boxShadow: error
                 ? '0 0 0px 1000px #4a1313 inset'
-                : version === 'dark'
+                : darkMode
                 ? '0 0 0px 1000px #12121226 inset'
                 : '0 0 0px 1000px #282828 inset',
             },
             'input:-internal-autofill-selected': {
-              bg: error ? 'dangerBg' : version === 'dark' ? 'textfieldDark' : 'gray.6',
+              bg: error ? 'dangerBg' : darkMode ? 'textfieldDark' : 'gray.6',
             },
             ':focus': {
               outline: 0,
@@ -102,7 +102,7 @@ const Input = ({ id, label, name, error, version, type, sx, ...rest }: Props): J
               position: 'absolute',
               right: '2px',
               top: '33px',
-              color: version === 'dark' ? 'labelDark' : 'label',
+              color: darkMode ? 'labelDark' : 'label',
               width: '24px',
               height: '16px',
             }}
@@ -118,7 +118,7 @@ const Input = ({ id, label, name, error, version, type, sx, ...rest }: Props): J
 
       <Box
         sx={{
-          color: version === 'dark' ? 'labelDark' : '#f4f4f480',
+          color: darkMode ? 'labelDark' : '#f4f4f480',
           minHeight: '2rem',
           py: 3,
         }}
@@ -134,7 +134,7 @@ const Input = ({ id, label, name, error, version, type, sx, ...rest }: Props): J
                   fontSize: 10,
                   fontFamily: 'body',
                   fontWeight: 'heading',
-                  color: version === 'dark' ? 'labelDark' : '#f4f4f480',
+                  color: darkMode ? 'labelDark' : '#f4f4f480',
                 }}
               >
                 {msg}

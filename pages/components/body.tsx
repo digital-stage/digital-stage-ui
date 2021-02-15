@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
 import Code from '../../ui/Components/Code';
 import Frame from '../../ui/Components/Frame';
 import { Micro, Regular } from '../../ui/Typography/Body';
@@ -18,12 +18,12 @@ const Body = () => {
         </Code>
       </Box>
       <Box sx={{ minWidth: '100%', width: '100%', bg: 'text', py: 5, minHeight: '50vh' }}>
-        <H3 variant="dark">Typography body - light background</H3>
-        <Regular variant="dark">Regular copy</Regular>
-        <Micro variant="dark">Micro copy</Micro>
+        <H3 darkMode>Typography body - light background</H3>
+        <Regular darkMode>Regular copy</Regular>
+        <Micro darkMode>Micro copy</Micro>
         <Code language="language-html">
-          {`<Regular variant="dark">Regular copy</Regular>
-<Micro variant="dark">Micro copy</Micro>`}
+          {`<Regular darkMode>Regular copy</Regular>
+<Micro darkMode>Micro copy</Micro>`}
         </Code>
       </Box>
     </Frame>

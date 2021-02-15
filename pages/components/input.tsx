@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
 import Code from '../../ui/Components/Code';
 import Frame from '../../ui/Components/Frame';
 import Input from '../../ui/Inputs/Input';
@@ -18,14 +18,14 @@ const textField = () => {
 <Input type="password" id="pass" name="link" label="Link" sx={{ width: '80%' }} />`}</Code>
       </Box>
       <Box sx={{ minWidth: '100%', width: '100%', bg: 'text', py: 5 }}>
-        <H3>Input</H3>
+        <H3 darkMode>Input</H3>
         <Box ml={7}>
           <Input
             type="text"
             id="lastname"
             name="link"
             label="Link"
-            version="dark"
+            darkMode
             sx={{ width: '80%' }}
           />
           <Input
@@ -33,12 +33,12 @@ const textField = () => {
             id="pass2"
             name="link"
             label="Link"
-            version="dark"
+            darkMode
             sx={{ width: '80%' }}
           />
         </Box>
-        <Code language="language-html">{`<Input type="text" id="lastname" name="link" label="Link" version="dark" sx={{ width: '80%' }} />
-<Input type="password" id="pass2" name="link" label="Link" version="dark" sx={{ width: '80%' }} />`}</Code>
+        <Code language="language-html">{`<Input type="text" id="lastname" name="link" label="Link" darkMode sx={{ width: '80%' }} />
+<Input type="password" id="pass2" name="link" label="Link" darkMode sx={{ width: '80%' }} />`}</Code>
       </Box>
     </Frame>
   );

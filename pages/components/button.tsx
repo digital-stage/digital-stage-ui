@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiPlus } from 'react-icons/bi';
-import { Box } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
 import Code from '../../ui/Components/Code';
 import Frame from '../../ui/Components/Frame';
 import {
@@ -9,7 +9,6 @@ import {
   SecondaryButton,
   TertiaryButton,
 } from '../../ui/Inputs/Button';
-import { Micro, Regular } from '../../ui/Typography/Body';
 import { H3, H4 } from '../../ui/Typography/Heading';
 
 const Button = () => {
@@ -81,8 +80,8 @@ const Button = () => {
       </Box>
       {/* light version */}
       <Box sx={{ minWidth: '100%', width: '100%', bg: 'text', py: 5 }}>
-        <H3 variant="dark">Text buttons</H3>
-        <H4 sx={{ mt: 4 }} variant="dark">
+        <H3 darkMode>Text buttons</H3>
+        <H4 sx={{ mt: 4 }} darkMode>
           Primary
         </H4>
         <Box ml={7}>
@@ -99,45 +98,45 @@ const Button = () => {
     <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon level 1
 </PrimaryButton>`}
         </Code>
-        <H4 sx={{ mt: 4 }} variant="dark">
+        <H4 sx={{ mt: 4 }} darkMode>
           Secondary
         </H4>
         <Box ml={7}>
-          <SecondaryButton text="dark">Button level 2</SecondaryButton>
-          <SecondaryButton text="dark" disabled>
+          <SecondaryButton darkMode>Button level 2</SecondaryButton>
+          <SecondaryButton darkMode disabled>
             Disabled level 2
           </SecondaryButton>
-          <SecondaryButton text="dark">
+          <SecondaryButton darkMode>
             <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon level 2
           </SecondaryButton>
         </Box>
         <Code language="language-html">
-          {`<SecondaryButton text="dark">Button level 2</SecondaryButton>
-<SecondaryButton text="dark" disabled>Disabled level 2</SecondaryButton>
-<SecondaryButton text="dark">
+          {`<SecondaryButton darkMode>Button level 2</SecondaryButton>
+<SecondaryButton darkMode disabled>Disabled level 2</SecondaryButton>
+<SecondaryButton darkMode>
     <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon level 2
 </SecondaryButton>`}
         </Code>
-        <H4 sx={{ mt: 4 }} variant="dark">
+        <H4 sx={{ mt: 4 }} darkMode>
           Tertiary
         </H4>
         <Box ml={7}>
-          <TertiaryButton text="dark">Button level 3</TertiaryButton>
-          <TertiaryButton disabled text="dark">
+          <TertiaryButton darkMode>Button level 3</TertiaryButton>
+          <TertiaryButton disabled darkMode>
             Disabled level 3
           </TertiaryButton>
-          <TertiaryButton text="dark">
+          <TertiaryButton darkMode>
             <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon level 3
           </TertiaryButton>
         </Box>
         <Code language="language-html">
-          {`<TertiaryButton text="dark">Button level 3</TertiaryButton>
-<TertiaryButton disabled text="dark"> Disabled level 3 </TertiaryButton>
-<TertiaryButton text="dark">
+          {`<TertiaryButton darkMode>Button level 3</TertiaryButton>
+<TertiaryButton disabled darkMode> Disabled level 3 </TertiaryButton>
+<TertiaryButton darkMode>
     <BiPlus size="16px" style={{ verticalAlign: 'middle' }} /> Icon level 3
 </TertiaryButton>`}
         </Code>
-        <H4 sx={{ mt: 4 }} variant="dark">
+        <H4 sx={{ mt: 4 }} darkMode>
           Danger
         </H4>
         <Box ml={7}>

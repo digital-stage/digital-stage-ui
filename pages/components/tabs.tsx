@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
 import Code from '../../ui/Components/Code';
 import Frame from '../../ui/Components/Frame';
 import Tab from '../../ui/Inputs/Tab';

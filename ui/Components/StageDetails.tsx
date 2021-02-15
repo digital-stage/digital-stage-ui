@@ -1,5 +1,6 @@
 import React from 'react';
-import { Flex, Image, SxStyleProp } from 'theme-ui';
+import { Image } from 'theme-ui';
+import Flex from '../../ui/Layout/Flex';
 import { H4 } from '../Typography/Heading';
 import { Micro } from '../Typography/Body';
 
@@ -19,14 +20,8 @@ const StageDetails = (props: React.ComponentPropsWithRef<'div'> & Props): JSX.El
         sx={{ width: '48px', height: '48px', minWidth: '48px', minHeight: '48px' }}
       />
       <Flex sx={{ flexDirection: 'column', justifyContent: 'center' }}>
-        <H4 sx={{ mb: 0 }} variant="light">
-          {name}
-        </H4>
-        {isMeOwner && (
-          <Micro sx={{ mb: 0 }} variant="light">
-            You own this stage
-          </Micro>
-        )}
+        <H4 sx={{ mb: 0 }}>{name}</H4>
+        {isMeOwner && <Micro sx={{ mb: 0 }}>You own this stage</Micro>}
       </Flex>
     </Flex>
   );

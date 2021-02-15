@@ -1,7 +1,9 @@
 import React from 'react';
-import { Box, Flex, SxStyleProp } from 'theme-ui';
+import { SxStyleProp } from 'theme-ui';
 import { PrimaryIconButton } from '../Inputs/IconButton';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import Box from '../Layout/Box';
+import Flex from '../Layout/Flex';
 
 export const CollapseHeader = (props: {
   children?: React.ReactNode;

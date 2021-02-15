@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImPhoneHangUp } from 'react-icons/im';
-import { Box } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
 import Code from '../../ui/Components/Code';
 import Frame from '../../ui/Components/Frame';
 import {
@@ -46,8 +46,8 @@ const Function = () => {
 </DangerFunctionIconButton>`}</Code>
       </Box>
       <Box sx={{ minWidth: '100%', width: '100%', bg: 'text', py: 5 }}>
-        <H3 variant="dark">Toggle button</H3>
-        <H4 sx={{ mt: 4 }} variant="dark">
+        <H3 darkMode>Toggle button</H3>
+        <H4 sx={{ mt: 4 }} darkMode>
           Primary toggle
         </H4>
         <Box ml={7}>
@@ -64,7 +64,7 @@ const Function = () => {
 <PrimaryFunctionIconButton disabled>
     <ImPhoneHangUp size="24px" />
 </PrimaryFunctionIconButton>`}</Code>
-        <H4 sx={{ mt: 4 }} variant="dark">
+        <H4 sx={{ mt: 4 }} darkMode>
           Danger toggle
         </H4>
         <Box ml={7}>

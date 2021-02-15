@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
 import Code from '../../ui/Components/Code';
 import Frame from '../../ui/Components/Frame';
 import Radio from '../../ui/Inputs/Radio';
@@ -20,15 +20,15 @@ const radioButton = () => {
 <Radio value="vl3" name="light-mode" label="label3" />`}</Code>
       </Box>
       <Box sx={{ minWidth: '100%', width: '100%', bg: 'text', py: 5 }}>
-        <H3>Radio</H3>
+        <H3 darkMode>Radio</H3>
         <Box ml={7}>
-          <Radio value="vl4" name="dark-mode" label="label4" defaultChecked labelVariant="dark" />
-          <Radio value="vl5" name="dark-mode" label="label5" labelVariant="dark" />
-          <Radio value="vl6" name="dark-mode" label="label6" labelVariant="dark" />
+          <Radio value="vl4" name="dark-mode" label="label4" darkMode />
+          <Radio value="vl5" name="dark-mode" label="label5" darkMode />
+          <Radio value="vl6" name="dark-mode" label="label6" darkMode defaultChecked />
         </Box>
-        <Code language="language-html">{`<Radio value="vl4" name="dark-mode" label="label4" defaultChecked labelVariant="dark"/>
-<Radio value="vl5" name="dark-mode" label="label5" labelVariant="dark" />
-<Radio value="vl6" name="dark-mode" label="label6" labelVariant="dark" />`}</Code>
+        <Code language="language-html">{`<Radio value="vl4" name="dark-mode" label="label4" darkMode/>
+<Radio value="vl5" name="dark-mode" label="label5" darkMode />
+<Radio value="vl6" name="dark-mode" label="label6" darkMode defaultChecked/>`}</Code>
       </Box>
     </Frame>
   );

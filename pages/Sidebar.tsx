@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Flex, Image, Link } from 'theme-ui';
+import { Image, Link } from 'theme-ui';
+import Box from '../ui/Layout/Box';
+import Flex from '../ui/Layout/Flex';
 import { Micro } from '../ui/Typography/Body';
 import { H5 } from '../ui/Typography/Heading';
 

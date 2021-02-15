@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Flex } from 'theme-ui';
 import Code from '../../ui/Components/Code';
 import Frame from '../../ui/Components/Frame';
 import { GrayBox, RedBox } from '../../ui/Layout/Box';
 import { DarkPanel, GrayPanel, LightPanel } from '../../ui/Layout/Panel';
 import { H3 } from '../../ui/Typography/Heading';
+import Flex from '../../ui/Layout/Flex';
 
 const panel = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FiEdit2 } from 'react-icons/fi';
-import { Box } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
 import Code from '../../ui/Components/Code';
 import Frame from '../../ui/Components/Frame';
 import { PrimaryIconButton, TertiaryIconButton } from '../../ui/Inputs/IconButton';
@@ -27,7 +27,7 @@ const Icon = () => {
 </TertiaryIconButton>`}</Code>
       </Box>
       <Box sx={{ minWidth: '100%', width: '100%', bg: 'text', py: 5 }}>
-        <H3 variant="dark">Inline icon button</H3>
+        <H3 darkMode>Inline icon button</H3>
         <Box ml={7}>
           <PrimaryIconButton>
             <FiEdit2 />

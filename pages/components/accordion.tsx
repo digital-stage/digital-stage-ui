@@ -1,7 +1,8 @@
 import React from 'react';
 import { FiEdit2 } from 'react-icons/fi';
 import { MdDelete } from 'react-icons/md';
-import { Box, Flex } from 'theme-ui';
+import Box from '../../ui/Layout/Box';
+import Flex from '../../ui/Layout/Flex';
 import Code from '../../ui/Components/Code';
 import Collapse, { CollapseBody, CollapseHeader } from '../../ui/Components/Collapse';
 import Frame from '../../ui/Components/Frame';
