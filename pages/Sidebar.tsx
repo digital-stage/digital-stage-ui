@@ -187,25 +187,25 @@ const Sidebar = () => {
                 <a>
                   <Micro>Collapse</Micro>
                 </a>
-                <hr style={hrStyle} />
               </Link>
+              <hr style={hrStyle} />
               <Link href="/components/dialog">
                 <a>
                   <Micro>Modal</Micro>
                 </a>
-                <hr style={hrStyle} />
               </Link>
+              <hr style={hrStyle} />
               <Link href="/components/sidemenu">
                 <a>
                   <Micro>Sidebar</Micro>
                 </a>
-                <hr style={hrStyle} />
               </Link>
+              <hr style={hrStyle} />
             </Box>
           </CollapseBody>
         </Collapse>
       </Flex>
-    </Box>
+    </Box >
   );
 };
 
