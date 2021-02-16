@@ -11,6 +11,9 @@ function MyApp({ Component, pageProps }): JSX.Element {
         body {
           margin: 0;
         }
+        a {
+          text-decoration: none;
+        }
       `}</style>
       <Flex>
         <Sidebar />

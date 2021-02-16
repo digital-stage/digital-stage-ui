@@ -538,6 +538,38 @@ const theme: Theme = {
         opacity: '0.5',
       },
     },
+    textarea: {
+      border: 0,
+      borderBottom: '1px solid transparent',
+      borderColor: 'text',
+      borderRadius: 0,
+      bg: 'gray.5',
+      height: '192px',
+      p: 5,
+      color: 'f4f4f44D',
+      outline: 0,
+      fontSize: 1,
+      fontFamily: 'body',
+      fontWeight: 'regular',
+      ':hover': {
+        borderColor: 'primaryHover',
+        bg: 'gray.6',
+      },
+      ':focus': {
+        borderWidth: '3px',
+        borderColor: 'primaryFocus',
+        outline: 0,
+      },
+      'option:checked': {
+        color: 'primary',
+      },
+      ':disabled': {
+        bg: 'textfieldDark',
+        color: '#f4f4f44D',
+        borderColour: '#f4f4f44D',
+        opacity: '0.5',
+      },
+    },
   },
   links: {
     bold: {
@@ -568,6 +600,10 @@ const theme: Theme = {
   styles: {
     a: {
       textDecoration: 'none',
+    },
+    hr: {
+      border: '1px solid transparent',
+      borderColor: 'gray.6',
     },
   },
 };

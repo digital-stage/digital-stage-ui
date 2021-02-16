@@ -1,11 +1,21 @@
 import React from 'react';
-import { Image, Link } from 'theme-ui';
+import { Image } from 'theme-ui';
+import Collapse, { CollapseBody, CollapseHeader } from '../ui/Components/Collapse';
 import Box from '../ui/Layout/Box';
 import Flex from '../ui/Layout/Flex';
 import { Micro } from '../ui/Typography/Body';
 import { H5 } from '../ui/Typography/Heading';
+import Link from 'next/link';
 
+const hrStyle = {
+  border: '1px solid #393939',
+};
 const Sidebar = () => {
+  const [typographyOpen, setTypographyOpen] = React.useState<boolean>(false);
+  const [layoutsOpen, setLayoutsOpen] = React.useState<boolean>(false);
+  const [inputsOpen, setInputsOpen] = React.useState<boolean>(false);
+  const [componentsOpen, setComponentsOpen] = React.useState<boolean>(false);
+
   return (
     <Box
       sx={{
@@ -31,78 +41,169 @@ const Sidebar = () => {
             sx={{
               color: 'text',
             }}
-            href="https://github.com/digital-stage/digital-stage-ui"
-            target="_blank"
+            href="/"
           >
-            <Image src="/logo.png" width="180" />
+            <a>
+              <Image src="/logo.png" width="180" />
+            </a>
           </Link>
         </Box>
-        <H5 sx={{ mb: 3 }}>Typography</H5>
-        <Box sx={{ ml: 4 }}>
-          <Link href="/components/heading">
-            <Micro>Heading</Micro>
-          </Link>
-          <Link href="/components/body">
-            <Micro>Body</Micro>
-          </Link>
-        </Box>
-        <H5 sx={{ mb: 3 }}>Layout</H5>
-        <Box sx={{ ml: 4 }}>
-          <Link href="/components/box">
-            <Micro>Box</Micro>
-          </Link>
-          <Link href="/components/flex">
-            <Micro>Flex</Micro>
-          </Link>
-          <Link href="/components/panel">
-            <Micro>Panel</Micro>
-          </Link>
-        </Box>
-        <H5 sx={{ mb: 3 }}>Inputs</H5>
-        <Box sx={{ ml: 4 }}>
-          <Link href="/components/button">
-            <Micro>Button</Micro>
-          </Link>
-          <Link href="/components/close">
-            <Micro>Close Button</Micro>
-          </Link>
-          <Link href="/components/toggle">
-            <Micro>Toggle Icon Button</Micro>
-          </Link>
-          <Link href="/components/function">
-            <Micro>Function Icon Button</Micro>
-          </Link>
-          <Link href="/components/icon">
-            <Micro>Icon Button</Micro>
-          </Link>
-          <Link href="/components/checkbox">
-            <Micro>Checkbox</Micro>
-          </Link>
-          <Link href="/components/dropdown">
-            <Micro>Dropdown</Micro>
-          </Link>
-          <Link href="/components/input">
-            <Micro>Input</Micro>
-          </Link>
-          <Link href="/components/radio">
-            <Micro>Radio</Micro>
-          </Link>
-          <Link href="/components/tabs">
-            <Micro>Tab</Micro>
-          </Link>
-        </Box>
-        <H5 sx={{ mb: 3 }}>Components</H5>
-        <Box sx={{ ml: 4 }}>
-          <Link href="/components/accordion">
-            <Micro>Collapse</Micro>
-          </Link>
-          <Link href="/components/dialog">
-            <Micro>Modal</Micro>
-          </Link>
-          <Link href="/components/sidemenu">
-            <Micro>Sidebar</Micro>
-          </Link>
-        </Box>
+        <Collapse>
+          <CollapseHeader
+            isOpen={typographyOpen}
+            onClick={() => setTypographyOpen(!typographyOpen)}
+          >
+            <H5 sx={{ mb: 3 }}>Typography</H5>
+          </CollapseHeader>
+          <CollapseBody isOpen={typographyOpen}>
+            <Box sx={{ ml: 4 }}>
+              <Link href="/components/heading">
+                <a>
+                  <Micro>Heading</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/body">
+                <a>
+                  <Micro>Body</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+            </Box>
+          </CollapseBody>
+        </Collapse>
+        <Collapse>
+          <CollapseHeader isOpen={layoutsOpen} onClick={() => setLayoutsOpen(!layoutsOpen)}>
+            <H5 sx={{ mb: 3 }}>Layout</H5>
+          </CollapseHeader>
+          <CollapseBody isOpen={layoutsOpen}>
+            <Box sx={{ ml: 4 }}>
+              <Link href="/components/box">
+                <a>
+                  <Micro>Box</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/flex">
+                <a>
+                  <Micro>Flex</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/panel">
+                <a>
+                  <Micro>Panel</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+            </Box>
+          </CollapseBody>
+        </Collapse>
+        <Collapse>
+          <CollapseHeader isOpen={inputsOpen} onClick={() => setInputsOpen(!inputsOpen)}>
+            <H5 sx={{ mb: 3 }}>Inputs</H5>
+          </CollapseHeader>
+          <CollapseBody isOpen={inputsOpen}>
+            <Box sx={{ ml: 4 }}>
+              <Link href="/components/button">
+                <a>
+                  <Micro>Button</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/toggle">
+                <a>
+                  <Micro>Toggle Icon Button</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/function">
+                <a>
+                  <Micro>Function Icon Button</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/icon">
+                <a>
+                  <Micro>Icon Button</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/close">
+                <a>
+                  <Micro>Close Button</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/checkbox">
+                <a>
+                  <Micro>Checkbox</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/radio">
+                <a>
+                  <Micro>Radio</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/dropdown">
+                <a>
+                  <Micro>Dropdown</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/input">
+                <a>
+                  <Micro>Input</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/textarea">
+                <a>
+                  <Micro>Textarea</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+              <Link href="/components/tabs">
+                <a>
+                  <Micro>Tab</Micro>
+                </a>
+              </Link>
+              <hr style={hrStyle} />
+            </Box>
+          </CollapseBody>
+        </Collapse>
+        <Collapse>
+          <CollapseHeader
+            isOpen={componentsOpen}
+            onClick={() => setComponentsOpen(!componentsOpen)}
+          >
+            <H5 sx={{ mb: 3 }}>Components</H5>
+          </CollapseHeader>
+          <CollapseBody isOpen={componentsOpen}>
+            <Box sx={{ ml: 4 }}>
+              <Link href="/components/accordion">
+                <a>
+                  <Micro>Collapse</Micro>
+                </a>
+                <hr style={hrStyle} />
+              </Link>
+              <Link href="/components/dialog">
+                <a>
+                  <Micro>Modal</Micro>
+                </a>
+                <hr style={hrStyle} />
+              </Link>
+              <Link href="/components/sidemenu">
+                <a>
+                  <Micro>Sidebar</Micro>
+                </a>
+                <hr style={hrStyle} />
+              </Link>
+            </Box>
+          </CollapseBody>
+        </Collapse>
       </Flex>
     </Box>
   );
