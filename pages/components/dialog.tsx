@@ -25,7 +25,7 @@ const dialog = () => {
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae autem esse quaerat id
                 adipisci repellat saepe optio repellendus nisi doloribus, libero, obcaecati velit
                 repudiandae cumque magni corporis nulla rerum nihil. Eligendi in atque incidunt,
-                maxime laboriosam cupiditate laborum.
+                maxime laboriosam cupiditate laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, placeat.
               </Regular>
             </ModalBody>
             <ModalFooter>
